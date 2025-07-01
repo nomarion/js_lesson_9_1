@@ -10,11 +10,11 @@ const handler = (object) => {
     let result = 0;
     const run = (object) => {
         if (Array.isArray(object)) {
-            for (let item of object) {
+            for (const item of object) {
                 result += item.salary ?? 0;
             }
         } else {
-            for (let key in object) {
+            for (const key in object) {
                 run(object[key]);
             }
         }
